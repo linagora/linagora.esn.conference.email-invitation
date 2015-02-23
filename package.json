@@ -16,7 +16,8 @@
     "awesome-module": "1.0.0",
     "awesome-module-manager": "1.0.0",
     "email-addresses": "^2.0.1",
-    "om-invitation": "git+https://ci.open-paas.org/stash/scm/~gcrosmarie/om-invitation.git"
+    "om-mailer": "git+https://ci.open-paas.org/stash/scm/om/om-mailer.git",
+    "om-invitation": "git+https://ci.open-paas.org/stash/scm/om/om-invitation.git"
   },
   "devDependencies": {
     "chai": "~1.9.2",
