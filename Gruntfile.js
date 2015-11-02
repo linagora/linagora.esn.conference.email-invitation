@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       options: {
         flags: [
           '--disable 0110',
-          '--jsdoc',
+          '--nojsdoc',
           '-e test/frontend/karma-include'
         ],
         reporter: {
