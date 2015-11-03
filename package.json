@@ -16,8 +16,9 @@
     "awesome-module": "1.0.0",
     "awesome-module-manager": "1.0.0",
     "email-addresses": "^2.0.1",
-    "om-mailer": "0.0.1",
-    "om-invitation": "0.0.1"
+    "express": "4.13.3",
+    "om-invitation": "0.0.1",
+    "om-mailer": "0.0.1"
   },
   "devDependencies": {
     "chai": "~1.9.2",
