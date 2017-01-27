@@ -122,14 +122,14 @@ describe('The emailInvitation lib', function() {
       });
     });
 
-    it('should call mailer sendMethod', function(done) {
+    it('should call mailer sendHTML', function(done) {
       var from = {objectType: 'user', id: 'robert@pipo.com'};
       var to = {objectType: 'user', id: 'gerard@pipo.com'};
       var conference = {_id: 'My Conference'};
 
-      this.depStore.mailer.sendHTML = function(fromAddr, toAddr, subject, template, locales, callback) {
-        expect(fromAddr).to.equal(mail.mail.noreply);
-        expect(toAddr).to.equal(to.id);
+      this.depStore.mailer.sendHTML = function(message, template, locales, callback) {
+        expect(message.from).to.equal(mail.mail.noreply);
+        expect(message.to).to.equal(to.id);
         expect(locales).to.deep.equal({from: from, to: to, conference: conference, baseUrl: baseUrl});
         return callback();
       };
@@ -141,9 +141,9 @@ describe('The emailInvitation lib', function() {
       var to = {objectType: 'user', id: 'gerard@pipo.com'};
       var conference = {_id: 'My Conference'};
 
-      this.depStore.mailer.sendHTML = function(fromAddr, toAddr, subject, template, locales, callback) {
-        expect(fromAddr).to.equal(mail.mail.noreply);
-        expect(toAddr).to.equal(to.id);
+      this.depStore.mailer.sendHTML = function(message, template, locales, callback) {
+        expect(message.from).to.equal(mail.mail.noreply);
+        expect(message.to).to.equal(to.id);
         expect(locales).to.deep.equal({from: from, to: to, conference: conference, baseUrl: 'https://test/'});
         return callback();
       };
