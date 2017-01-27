@@ -1,6 +1,6 @@
 {
   "name": "om-email-invitation",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Email Invitation Awesome Module",
   "main": "lib/index.js",
   "repository": {
