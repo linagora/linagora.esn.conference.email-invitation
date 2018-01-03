@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('om-email-invitation', [
+angular.module('linagora.esn.conference.email-invitation', [
   'meetings.invitation'
 ])
 .config(['invitationServiceProvider', function(invitationServiceProvider) {
@@ -16,6 +16,6 @@ angular.module('om-email-invitation', [
   invitationServiceProvider.register(100, impl);
 }])
 .directive('invitationDialogUserEmail', ['invitationService', function(invitationService) {
-  var templateUrl = '/om-email-invitation/views/invitation-dialog-email.html';
+  var templateUrl = '/linagora.esn.conference.email-invitation/views/invitation-dialog-email.html';
   return invitationService.createContactDirective(templateUrl);
 }]);

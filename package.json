@@ -1,24 +1,24 @@
 {
-  "name": "om-email-invitation",
+  "name": "linagora.esn.conference.email-invitation",
   "version": "0.0.4",
   "description": "Email Invitation Awesome Module",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://ci.open-paas.org/stash/scm/om/om-email-invitation.git"
+    "url": "https://github.com/linagora/linagora.esn.conference.email-invitation.git"
   },
   "keywords": [
     "awesome",
     "module",
-    "emailInvitation"
+    "email"
   ],
   "dependencies": {
     "awesome-module": "1.0.0",
     "awesome-module-manager": "1.0.0",
     "email-addresses": "^2.0.1",
     "express": "4.13.3",
-    "om-invitation": "0.0.2",
-    "om-mailer": "0.2.5"
+    "linagora.esn.conference.invitation": "linagora/linagora.esn.conference.invitation",
+    "linagora.esn.mailer": "linagora/linagora.esn.mailer"
   },
   "devDependencies": {
     "chai": "~1.9.2",
