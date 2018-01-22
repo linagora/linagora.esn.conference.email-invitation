@@ -79,6 +79,21 @@ module.exports = function(grunt) {
         src: ['<%= jshint.quick.src %>']
       }
     },
+    puglint: {
+      all: {
+        options: {
+          config: {
+            disallowAttributeInterpolation: true,
+            disallowLegacyMixinCall: true,
+            validateExtensions: true,
+            validateIndentation: 2
+          }
+        },
+        src: [
+          'frontend/**/*.pug'
+        ]
+      }
+    },
     run_grunt: {
       all: {
         options: {
@@ -145,13 +160,14 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-gjslint');
   grunt.loadNpmTasks('grunt-run-grunt');
   grunt.loadNpmTasks('grunt-lint-pattern');
+  grunt.loadNpmTasks('grunt-puglint');
   grunt.loadNpmTasks('grunt-release');
 
   grunt.loadTasks('tasks');
 
   grunt.registerTask('test-unit-backend', ['run_grunt:unit_backend']);
   grunt.registerTask('test', ['linters', 'run_grunt:unit_backend']);
-  grunt.registerTask('linters', 'Check code for lint', ['jshint:all', 'gjslint:all', 'lint_pattern:all']);
+  grunt.registerTask('linters', 'Check code for lint', ['jshint:all', 'gjslint:all', 'lint_pattern:all', 'puglint:all']);
 
   /**
    * Usage:
