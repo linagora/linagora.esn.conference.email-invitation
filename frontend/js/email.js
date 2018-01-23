@@ -13,9 +13,11 @@ angular.module('linagora.esn.conference.email-invitation', [
       return text && !!text.match(EMAIL_REGEX);
     }
   };
+
   invitationServiceProvider.register(100, impl);
 }])
 .directive('invitationDialogUserEmail', ['invitationService', function(invitationService) {
   var templateUrl = '/linagora.esn.conference.email-invitation/views/invitation-dialog-email.html';
+
   return invitationService.createContactDirective(templateUrl);
 }]);
