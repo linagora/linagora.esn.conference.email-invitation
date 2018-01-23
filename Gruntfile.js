@@ -135,8 +135,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-eslint');
-  grunt.loadNpmTasks('grunt-run-grunt');
-  grunt.loadNpmTasks('grunt-lint-pattern');
+  grunt.loadNpmTasks('@linagora/grunt-run-grunt');
+  grunt.loadNpmTasks('@linagora/grunt-lint-pattern');
   grunt.loadNpmTasks('grunt-puglint');
   grunt.loadNpmTasks('grunt-release');
 
